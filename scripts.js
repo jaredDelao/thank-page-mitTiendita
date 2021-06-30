@@ -4,16 +4,16 @@ const titulo = document.getElementById('titulo');
 const descripcion = document.getElementById('descripcion');
 
 window.addEventListener("load", (event) => {
-  console.log({ params });
+  console.log(params );
   console.log("page is fully loaded");
 
-  if (params.nbResponse === 'Aprobado') {
+  if (params && params.nbResponse === 'Aprobado') {
     //   Mostrar landing aprobado
-    titulo.innerText = params.nbResponse;
+    // titulo.innerText = params.nbResponse;
     // descripcion.innerText = params.nb_error;
 } else {
     //   Mostrar landing error
-    titulo.innerText = params.nbResponse;
-    descripcion.innerText = params.nb_error;
+    // titulo.innerText = params.nbResponse;
+    // descripcion.innerText = params.nb_error;
   }
 });
